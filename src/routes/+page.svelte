@@ -3,7 +3,7 @@
     let code = ''
     let error = ''
     function newGame(){
-
+        
         window.location.href = "/new/"
     }
 
@@ -13,7 +13,7 @@
             method: 'GET'
         });
         let data = await response.json();
-        if(response.status==400){
+        if(response.status!=201){
             error = data.message
         }
         else{
