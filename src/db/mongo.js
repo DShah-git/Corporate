@@ -1,8 +1,10 @@
-// @ts-nocheck
+
 import {MongoClient} from 'mongodb'; 
+import { mongo_url } from '$env/static/private';
 import 'dotenv/config'
 
-const client = new MongoClient(process.env.mongo_url)
+// @ts-ignore
+const client = new MongoClient(mongo_url)
 
 export function start_mongo() {
 	console.log('Starting mongo...');
