@@ -1,5 +1,7 @@
 <script>
 
+    import Icon from "$lib/logo.jpg"
+
     let code = ''
     let error = ''
     function newGame(){
@@ -26,7 +28,9 @@
 </script>
 
 <section class="container">
-    <h1>Corporate</h1>
+    <h1 class="logo">
+        <img src={Icon} style="height:100px; width:100px" alt="" srcset="">
+        Corporate: The Game</h1>
 
     <button on:click={()=>newGame()}>Start New Game</button>
     <br>
@@ -52,6 +56,13 @@
         margin-inline:auto;
     }
 
+    .logo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap:2rem;
+    }
+
     hr{
         color:black;
         width: 100%;
@@ -60,8 +71,8 @@
     }
 
     h1{
-        font-size: 4rem;
-        margin-bottom:8rem;
+        font-size: 3rem;
+        margin-bottom:5rem;
     }
 
 </style>
